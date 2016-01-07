@@ -19,16 +19,27 @@
 .sidebar {
 	float: left;
 	background-color: turquoise;
-	width: 200px;
-	height: 600px;
+	width: 20%;
+	height: 400px;
 	border: 3px solid black;
 }
 
 .buttonFilter {
-	margin: auto;
+	background-color: gainsboro;
+	display: block;
+	margin: 10px auto 25px auto;
+	border: 2px solid black;
+	border-radius: 3px;
+	font-size: 1em;
 }
 
-
+.yellowContent {
+	background-color: lemonchiffon;
+	float: right;
+	width: 77.5%;
+	height: 400px;
+	border: 3px solid black;
+}
 
 
 
