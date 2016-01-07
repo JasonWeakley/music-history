@@ -17,27 +17,49 @@
 
 <body>
 	<div class="sidebar">
-		<p>Insert range slider.</p>
+		<form action="action_page.php" method="get"> <!-- I dont think I need this php file, or method -->
+	  		<p>Song Length</p>
+	  		<input type="range" name="points" min="0" max="10">
+		</form>
+
 		<select class="selectArtist">
-		  <option value="tobyMac">tobyMac</option>
-		  <option value="Chris Tomlin">Chris Tomlin</option>
-		  <option value="for KING COUNTRY">for KING & COUNTRY</option>
-		  <option value="The Afters">The Afters</option>
-		  <option value="Third Day">Third Day</option>
+			<option value="tobyMac">tobyMac</option>
+			<option value="Chris Tomlin">Chris Tomlin</option>
+			<option value="for KING COUNTRY">for KING & COUNTRY</option>
+			<option value="The Afters">The Afters</option>
+			<option value="Third Day">Third Day</option>
 		</select>
 		<select class="selectAlbum">
-		  <option value="This Is Not a Test">This Is Not A Test, by tobyMac</option>
-		  <option value="Love Ran Red">Love Ran Red, by Chris Tomlin</option>
-		  <option value="Crave">Crave, by for KING & COUNTRY</option>
-		  <option value="Light Up the Sky">Light Up the Sky, by The Afters</option>
-		  <option value="Revelation">Revelation, by Third Day</option>
+			<option value="This Is Not a Test">This Is Not A Test, by tobyMac</option>
+			<option value="Love Ran Red">Love Ran Red, by Chris Tomlin</option>
+			<option value="Crave">Crave, by for KING & COUNTRY</option>
+			<option value="Light Up the Sky">Light Up the Sky, by The Afters</option>
+			<option value="Revelation">Revelation, by Third Day</option>
 		</select>
+
+		<form action="">
+			<input type="checkbox" name="vehicle" value="Rock">Rock<br>
+			<input type="checkbox" name="vehicle" value="Pop">Pop<br>
+			<input type="checkbox" name="vehicle" value="Blues">Blues<br>
+			<input type="checkbox" name="vehicle" value="Classical">Classical<br>
+			<input type="checkbox" name="vehicle" value="Jazz">Jazz<br>
+			<input type="checkbox" name="vehicle" value="Hip Hop">Hip Hop
+		</form>
+
 		<button class="buttonFilter">Filter</button>
 	</div>
 
 	<div class="yellowContent">
-		
+			<h2>Song Name</h2>
+				<p>Artist Name  |  Album Name  |  Genre</p>
+				<br>
+			<h2>Song Name</h2>
+				<p>Artist Name  |  Album Name  |  Genre</p>
+				<br>
+			<h2>Song Name</h2>
+				<p>Artist Name  |  Album Name  |  Genre</p>
+				<br>
 	</div>
-
+		
 </body>
 </html>
