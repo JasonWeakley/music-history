@@ -1,13 +1,26 @@
 body {
 	padding: 0;
 	margin: 0;
-	font-family: "Arial";
+	font-family: Arial;
 }
-
+/*NAVIGATION*/
 .nav {
     background-color: lightpink;
     height: 60px;
     border: 3px solid black;
+}
+
+.nav a {
+	color: inherit;
+	text-decoration: none;
+	display: inline-block;
+    vertical-align: center;
+}
+
+.nav li a {
+	display: inline-block;
+    vertical-align: center;
+    text-align: center;
 }
 
 .nav li {
@@ -22,38 +35,63 @@ body {
     color: white;
 }
 
+.nav a:hover {
+	background-color: lightcoral;
+}
+
 .sidebar {
 	box-sizing: border-box;
 	float: left;
 	background-color: turquoise;
 	width: 20%;
-	height: 400px;
+	height: 450px;
 	border: 3px solid black;
-	padding: 10px 30px;
-}
-
-.buttonFilter {
-	background-color: gainsboro;
-	display: block;
-	margin: 10px auto 25px auto;
-	border: 2px solid black;
-	border-radius: 3px;
-	font-size: 1em;
+	padding: 10px 10px;
 }
 
 .yellowContent {
 	background-color: lemonchiffon;
 	float: right;
 	width: 78%;
-	height: 400px;
+	height: 450px;
 	border: 3px solid black;
 	padding: 10px 30px;
 	box-sizing: border-box;
 }
 
+.songLength {
+	margin: 0px auto 15px;
+}
 
+.selectArtist {
+	display: block;
+	border: 2px solid black;
+	width: 90%;
+	font-size: 1em;
+	margin: 0px auto 15px;
+}
 
+.selectAlbum {
+	display: block;
+	border: 2px solid black;
+	width: 90%;
+	font-size: 1em;
+	margin: 0px auto 15px;
+}
 
+.checkboxes {
+	display: block;
+	margin: 0px auto 15px;
+}
+
+.buttonFilter {
+	background-color: gainsboro;
+	display: block;
+	margin: 0px auto 15px;
+	border: 2px solid black;
+	border-radius: 3px;
+	font-size: 1em;
+}
 
 
 
