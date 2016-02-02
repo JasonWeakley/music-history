@@ -6,7 +6,6 @@
   <title>Music History</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 	<nav>
 		<ul class="nav">
 			<li><a href="#">View Music</a></li>
@@ -17,22 +16,22 @@
 
 	<body>
 		<div class="sidebar">
-			<p>Song Length</p>
-			<form align="center" class="songLength">
-		  		<input type="range" name="range" min="0" max="100" value="50" onchange="updateNumberInput(this.value);"><br>
-		  		<input type="number" name="number" min="0" max="100" value="50">
-			</form>
-  <script type="text/javascript">
-    function updateTextInput(val) {
-      document.getElementById('textInput').value=val; 
-    }
-  </script>
-    <input type="range" name="rangeInput" min="0" max="100" value="10" onchange="updateTextInput(this.value);">
-    <input type="text" id="textInput" value="">
-<br><br>
+				<p>Song Length</p>
+				<form align="center" class="songLength">
+			  		<input type="range" name="range" min="0" max="100" value="50" onchange="updateNumberInput(this.value);"><br>
+			  		<input type="number" name="number" min="0" max="100" value="50">
+				</form>
+		  		<script type="text/javascript">
+		    		function updateTextInput(val) {
+		      			var val = document.getElementById('textInput').value=val; 
+		    		}
+		  		</script>
+		    	<input type="range" name="rangeInput" min="0" max="100" value="10" onchange="updateTextInput(this.value);">
+		    	<input type="text" id="textInput" value="">
+				<br><br>
 			Artist
 			<select class="selectArtist">
-				<option value="Option" selected="" disabled="disabled">Option</option>
+				<option value="Option" selected="">Option</option>
 				<option value="tobyMac">tobyMac</option>
 				<option value="Chris Tomlin">Chris Tomlin</option>
 				<option value="for KING COUNTRY">for KING & COUNTRY</option>
@@ -40,7 +39,7 @@
 				<option value="Third Day">Third Day</option>
 			</select>
 			Album
-			<select class="selectAlbum" selected disabled="disabled">
+			<select class="selectAlbum">
 				<option value="Options">Options</option>
 				<option value="This Is Not a Test">This Is Not A Test, by tobyMac</option>
 				<option value="Love Ran Red">Love Ran Red, by Chris Tomlin</option>
@@ -61,16 +60,8 @@
 			<button class="buttonFilter">Filter</button>
 		</div>
 
-		<div class="yellowContent">
-				<h2>Song Name</h2>
-					<p>Artist Name  |  Album Name  |  Genre</p>
-					<br>
-				<h2>Song Name</h2>
-					<p>Artist Name  |  Album Name  |  Genre</p>
-					<br>
-				<h2>Song Name</h2>
-					<p>Artist Name  |  Album Name  |  Genre</p>
-					<br>
+		<div class="yellowContent" id="songInfo">
 		</div>
+		<script type="text/javascript" src="songs.js"></script>
 	</body>
 </html>

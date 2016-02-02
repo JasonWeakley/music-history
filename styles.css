@@ -44,18 +44,20 @@ body {
 	float: left;
 	background-color: turquoise;
 	width: 20%;
-	height: 450px;
+	/*height: 450px;*/
 	border: 3px solid black;
 	padding: 10px 10px;
+	overflow: visible;
 }
 
 .yellowContent {
 	background-color: lemonchiffon;
 	float: right;
 	width: 78%;
-	height: 450px;
+	height: auto;
 	border: 3px solid black;
 	padding: 10px 30px;
+	overflow: visible;
 	box-sizing: border-box;
 }
 
