@@ -6,60 +6,62 @@
   <title>Music History</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 	<nav>
 		<ul class="nav">
-			<li>View Music</li>
-			<li>Add Music</li>
-			<li>Profile</li>
+			<li><a href="#">View Music</a></li>
+			<li><a href="#">Add Music</a></li>
+			<li><a href="#">Profile</a></li>
 		</ul>
 	</nav>
 
-<body>
-	<div class="sidebar">
-		<form action="action_page.php" method="get"> <!-- I dont think I need this php file, or method -->
-	  		<p>Song Length</p>
-	  		<input type="range" name="points" min="0" max="10">
-		</form>
+	<body>
+		<div class="sidebar">
+				<p>Song Length</p>
+				<form align="center" class="songLength">
+			  		<input type="range" name="range" min="0" max="100" value="50" onchange="updateNumberInput(this.value);"><br>
+			  		<input type="number" name="number" min="0" max="100" value="50">
+				</form>
+		  		<script type="text/javascript">
+		    		function updateTextInput(val) {
+		      			var val = document.getElementById('textInput').value=val; 
+		    		}
+		  		</script>
+		    	<input type="range" name="rangeInput" min="0" max="100" value="10" onchange="updateTextInput(this.value);">
+		    	<input type="text" id="textInput" value="">
+				<br><br>
+			Artist
+			<select class="selectArtist">
+				<option value="Option" selected="">Option</option>
+				<option value="tobyMac">tobyMac</option>
+				<option value="Chris Tomlin">Chris Tomlin</option>
+				<option value="for KING COUNTRY">for KING & COUNTRY</option>
+				<option value="The Afters">The Afters</option>
+				<option value="Third Day">Third Day</option>
+			</select>
+			Album
+			<select class="selectAlbum">
+				<option value="Options">Options</option>
+				<option value="This Is Not a Test">This Is Not A Test, by tobyMac</option>
+				<option value="Love Ran Red">Love Ran Red, by Chris Tomlin</option>
+				<option value="Crave">Crave, by for KING & COUNTRY</option>
+				<option value="Light Up the Sky">Light Up the Sky, by The Afters</option>
+				<option value="Revelation">Revelation, by Third Day</option>
+			</select>
+			Genre
+			<form class="checkboxes" action="">
+				<input type="checkbox" name="vehicle" value="Rock">Rock<br>
+				<input type="checkbox" name="vehicle" value="Pop">Pop<br>
+				<input type="checkbox" name="vehicle" value="Blues">Blues<br>
+				<input type="checkbox" name="vehicle" value="Classical">Classical<br>
+				<input type="checkbox" name="vehicle" value="Jazz">Jazz<br>
+				<input type="checkbox" name="vehicle" value="Hip Hop">Hip Hop
+			</form>
 
-		<select class="selectArtist">
-			<option value="tobyMac">tobyMac</option>
-			<option value="Chris Tomlin">Chris Tomlin</option>
-			<option value="for KING COUNTRY">for KING & COUNTRY</option>
-			<option value="The Afters">The Afters</option>
-			<option value="Third Day">Third Day</option>
-		</select>
-		<select class="selectAlbum">
-			<option value="This Is Not a Test">This Is Not A Test, by tobyMac</option>
-			<option value="Love Ran Red">Love Ran Red, by Chris Tomlin</option>
-			<option value="Crave">Crave, by for KING & COUNTRY</option>
-			<option value="Light Up the Sky">Light Up the Sky, by The Afters</option>
-			<option value="Revelation">Revelation, by Third Day</option>
-		</select>
+			<button class="buttonFilter">Filter</button>
+		</div>
 
-		<form action="">
-			<input type="checkbox" name="vehicle" value="Rock">Rock<br>
-			<input type="checkbox" name="vehicle" value="Pop">Pop<br>
-			<input type="checkbox" name="vehicle" value="Blues">Blues<br>
-			<input type="checkbox" name="vehicle" value="Classical">Classical<br>
-			<input type="checkbox" name="vehicle" value="Jazz">Jazz<br>
-			<input type="checkbox" name="vehicle" value="Hip Hop">Hip Hop
-		</form>
-
-		<button class="buttonFilter">Filter</button>
-	</div>
-
-	<div class="yellowContent">
-			<h2>Song Name</h2>
-				<p>Artist Name  |  Album Name  |  Genre</p>
-				<br>
-			<h2>Song Name</h2>
-				<p>Artist Name  |  Album Name  |  Genre</p>
-				<br>
-			<h2>Song Name</h2>
-				<p>Artist Name  |  Album Name  |  Genre</p>
-				<br>
-	</div>
-		
-</body>
+		<div class="yellowContent" id="songInfo">
+		</div>
+		<script type="text/javascript" src="songs.js"></script>
+	</body>
 </html>
