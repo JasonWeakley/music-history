@@ -6,16 +6,16 @@
   <title>Music History</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-	<nav>
-		<ul class="nav">
-			<li><a href="#">View Music</a></li>
-			<li><a href="#">Add Music</a></li>
-			<li><a href="#">Profile</a></li>
-		</ul>
-	</nav>
-
 	<body>
-		<div class="sidebar">
+		<nav>
+			<ul class="nav">
+			  <li><a href="#" id="link-home">Home</a></li>
+				<li><a href="#" id="link-list">List Music</a></li>
+				<li><a href="#" id="link-add">Add Music</a></li>
+			</ul>
+		</nav>
+
+			<div class="sidebar">
 				<p>Song Length</p>
 				<form align="center" class="songLength">
 			  		<input type="range" name="range" min="0" max="100" value="50" onchange="updateNumberInput(this.value);"><br>
@@ -29,39 +29,63 @@
 		    	<input type="range" name="rangeInput" min="0" max="100" value="10" onchange="updateTextInput(this.value);">
 		    	<input type="text" id="textInput" value="">
 				<br><br>
-			Artist
-			<select class="selectArtist">
-				<option value="Option" selected="">Option</option>
-				<option value="tobyMac">tobyMac</option>
-				<option value="Chris Tomlin">Chris Tomlin</option>
-				<option value="for KING COUNTRY">for KING & COUNTRY</option>
-				<option value="The Afters">The Afters</option>
-				<option value="Third Day">Third Day</option>
-			</select>
-			Album
-			<select class="selectAlbum">
-				<option value="Options">Options</option>
-				<option value="This Is Not a Test">This Is Not A Test, by tobyMac</option>
-				<option value="Love Ran Red">Love Ran Red, by Chris Tomlin</option>
-				<option value="Crave">Crave, by for KING & COUNTRY</option>
-				<option value="Light Up the Sky">Light Up the Sky, by The Afters</option>
-				<option value="Revelation">Revelation, by Third Day</option>
-			</select>
-			Genre
-			<form class="checkboxes" action="">
-				<input type="checkbox" name="vehicle" value="Rock">Rock<br>
-				<input type="checkbox" name="vehicle" value="Pop">Pop<br>
-				<input type="checkbox" name="vehicle" value="Blues">Blues<br>
-				<input type="checkbox" name="vehicle" value="Classical">Classical<br>
-				<input type="checkbox" name="vehicle" value="Jazz">Jazz<br>
-				<input type="checkbox" name="vehicle" value="Hip Hop">Hip Hop
-			</form>
+				Artist
+				<select class="selectArtist">
+					<option value="Option" selected="">Option</option>
+					<option value="tobyMac">tobyMac</option>
+					<option value="Chris Tomlin">Chris Tomlin</option>
+					<option value="for KING COUNTRY">for KING & COUNTRY</option>
+					<option value="The Afters">The Afters</option>
+					<option value="Third Day">Third Day</option>
+				</select>
+				Album
+				<select class="selectAlbum">
+					<option value="Options">Options</option>
+					<option value="This Is Not a Test">This Is Not A Test, by tobyMac</option>
+					<option value="Love Ran Red">Love Ran Red, by Chris Tomlin</option>
+					<option value="Crave">Crave, by for KING & COUNTRY</option>
+					<option value="Light Up the Sky">Light Up the Sky, by The Afters</option>
+					<option value="Revelation">Revelation, by Third Day</option>
+				</select>
+				Genre
+				<form class="checkboxes" action="">
+					<input type="checkbox" name="vehicle" value="Rock">Rock<br>
+					<input type="checkbox" name="vehicle" value="Pop">Pop<br>
+					<input type="checkbox" name="vehicle" value="Blues">Blues<br>
+					<input type="checkbox" name="vehicle" value="Classical">Classical<br>
+					<input type="checkbox" name="vehicle" value="Jazz">Jazz<br>
+					<input type="checkbox" name="vehicle" value="Hip Hop">Hip Hop
+				</form>
 
-			<button class="buttonFilter">Filter</button>
-		</div>
+				<button class="buttonFilter">Filter</button>
+			</div>
 
-		<div class="yellowContent" id="songInfo">
-		</div>
-		<script type="text/javascript" src="songs.js"></script>
+			<div class="yellowContent">
+				<section class="showhide visible" id="home-view">
+				</section>
+
+				<section class="showhide hidden" id="list-view">
+		  		<h3>List</h3>
+				</section>
+
+				<section class="showhide hidden" id="add-view">
+				  <h3>Add Your Own Music</h3>
+					<div id="add-music">
+						<h3>Song Name</h3>
+						<input type="text" name="songname" id="input-song">
+						<h3>Artist Name</h3>
+						<input type="text" name="artistname" id="input-artist">
+						<h3>Album Name</h3>
+						<input type="text" name="albumname" id="input-album">
+						<button type="button" id="add-button">Add</button>
+					</div>
+				</section>
+			</div>
+
+	  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="scripts/songs.js"></script>
+		<script type="text/javascript" src="scripts/home.js"></script>
+		<script type="text/javascript" src="scripts/list.js"></script>
+		<script type="text/javascript" src="scripts/add.js"></script>
 	</body>
 </html>
