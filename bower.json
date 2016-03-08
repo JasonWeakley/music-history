@@ -1,0 +1,21 @@
+{
+  "name": "musichistory",
+  "homepage": "https://github.com/JasonWeakley/musichistory-boilerplate",
+  "authors": [
+    "Jason Weakley <jason.b.weakley@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^2.2.1"
+  }
+}
